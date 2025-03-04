@@ -23,6 +23,11 @@ class UserService
         ]);
     }
 
+    public function findByCpf($cpf)
+    {
+        return User::where('cpf', $cpf)->firstOrFail();
+    }
+
     public function getUsers()
     {
         return User::all();
